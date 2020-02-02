@@ -1,0 +1,325 @@
+/*  geral */
+/* 
+Gelasio|Lobster|Mansalva|Playfair+Display|Roboto+Slab&display=swap
+*/
+body{
+    font-family:  'Times New Roman', Times, serif;
+     color: #0c0b0b;   
+}
+
+/* se eu for usar os titulos com h isso sera a configuracao geral 
+se eu precisar especificar eu troco  */
+
+h1,h2 {
+    margin: 0;
+    font-family: "Roboto Slab" ,'Times New Roman', Times, serif ;
+    font-weight: 700;
+}
+
+h3 {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 15px;
+    
+}
+
+h4 {
+    margin: 0;
+    font-family:  'Times New Roman', Times, serif ;
+    font-weight: 100;
+    font-style: initial;
+    font-size: 1px;
+}
+
+/* usa se o . qdo seliciona-se uma classe */
+.button {
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 10px 30px;
+    background: #8f2faf;
+    font-size: .9em;
+    border-radius: 3px;
+}
+
+/* barra de navegacao mobile nav */
+/* pode acontecer uma incompatibilidade com alguns browsers usando flex 
+baixei uma ferramenta chamada auto prefixer  */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c035a2;
+}
+/* a cor dos links  so a logo  Open+Sans*/
+
+nav > a {
+    text-decoration: rgb(16, 16, 17);
+    color: #f1f1f1;
+    font: 700;
+    font-size: 28px;
+    font-family: 'Vernon Adams','Times New Roman', Times, serif ;
+}
+
+/* remover as bolinhas que esta na frente da lista ,
+padding 0 pk nao quero espacamento ao redor da lista  */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 0;
+    width: 50%;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+/* finalizado o nav do mobile  */
+
+/* o cabecalho , essa image fica so no style */
+/* EH AQUI QUE EU QUERO FAZER O ROLAMENTO DAS FOTOS COM AS MENSAGENS 
+DOS SERVICOS DA OFICINA */
+
+/* header place */
+
+
+#header {
+
+    width: 100%;
+    height: 50%;
+
+
+    
+}
+
+/*  referente somente ao paragrafo do header ai acima*/
+header p {
+    margin-bottom: 2em;
+}
+/* --------------------------- */
+/*  essa secao de sobre eh definida com a SECTION id "sobre" */
+/* quando usa a tag ID aqui vc tem usar #  esse SOBRE esta na linha 31 e e tem href na linha 28, pk foi feito uma classe botao para eles , esta aqui na linha */
+#aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 20px;
+    background-color: #8f2faf;
+    color: #f1f1f1;
+}
+
+#aboutus p {
+    margin-bottom: 2.5em ;
+    max-width: 1000px;
+}
+
+/* aqui sera mudado a cor do botao do SOBRE  */
+#aboutus .button{
+    background-color: #f1f1f1;
+    color: #4d4d4d;
+}
+/* servicos  */
+#services{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+/* configurar as div que estao dentro de SERVICOS */
+#services div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    text-align: center;
+    margin-top: 30px;   
+}
+
+/* portifolio */
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding-top: 20px;
+}
+/* essa modificacao vai so no nome portifolio que esta com a configuracao geral do h2 */
+#portfolio h2 {
+    margin-bottom: 20px;    
+}
+#portfolio imag {
+    width: 100%;
+}
+
+/* contato */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #8f2faf;
+    color: #f1f1f1;
+}
+/*  essa media queries vai fazer a responsividade para os outros tamanhos de tela */
+@media screen and (min-width: 768px) {
+    /* 
+    navegacao
+     */
+     /* isso eh sobre os itens de navegacao que estao na linha 18 a 21 da pag index e aqui apartir da 31  */
+     /*  */
+    nav {
+        flex-direction: row;
+        justify-content: space-around;      
+
+    } 
+
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+    }
+    /* cabecalho da navegacao */
+    /* ver a explicacao no video 35min */
+    header {
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+/* sobre */
+#aboutus {
+    height: 250px;
+    height: 30vh;
+    justify-content: center;
+    min-height: 250px;
+}
+#services {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#services h2 {
+    text-align: center;
+    width:100%;
+}
+#services div {
+    flex-grow: 1;
+    flex-basis: 150px;
+    padding: 0 10px;
+
+}
+/* portfoloio */
+#portfolio{
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#portfolio h2 {
+    width: 100%;
+    text-align: center;    
+}
+#portfolio img {
+    width: 33.333333333333%;    
+}
+/* contato */
+#contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#contact h2,
+#contact p {
+    width: 100%;    
+}
+
+
+}
+
+
+#test111 {
+    color: #8f2faf;
+}
+
+
+/* login teste 
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #17a2b8;
+  height: 100vh;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #mycarousel {
+    position: relative;
+    margin-right: 10%;
+    margin-left: 10%;
+} */
+
+/* para eu verificar depois 
+
+background-image: url('../image/image1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+
+*/
